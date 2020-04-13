@@ -1,0 +1,259 @@
+@font-face { font-family: 'sans';
+ src: url('../fonts/MuseoSansCyrl.otf'); }
+
+ .sans(){ font-family:'sans', sans-serif;}
+
+
+ html{
+ 	font-size: 10px;
+	}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 10px;
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+input,
+input:active,
+input:focus{
+	outline: none;
+}
+textarea,
+textarea:active,
+textarea:focus{
+	outline: none;
+}
+
+body{
+	.sans();
+	color:#1f2029;
+}
+
+header{
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.first-section{
+	background: url(../img/header/bg.png) no-repeat center;
+	background-size: cover;
+	padding-top: 4rem;
+	padding-bottom: 36rem;
+	&-header{
+		text-align: center;
+		margin-bottom: 2.5rem;
+
+	}
+	&-img{
+		display: inline-block;
+		&-first{
+			width: 5%;
+		}
+		&-twice{
+			width: 5%;
+			padding-bottom: 3%;
+		}
+	}
+
+	&-title{
+		.sans();
+		color: #1f2029;
+		font-size: 3.6rem;
+		font-weight: 900;
+		display: inline-block;
+	}
+}	
+
+/* Базовый контейнер табов */
+.tabs {
+	border-radius: 2rem;
+	width: 100%;
+	padding: 0px;
+	margin: 0 auto;
+	background-color: #f7f7f7;
+}
+/* Стили секций с содержанием */
+.tabs>section {
+	display: none;
+	padding: 0 0 0 0;
+	background: #fff;
+	color: #1f2029;
+	border-radius: 2rem;
+}
+.tab-section-video{
+	text-align: center;
+	width: 50%;
+	background: url(../img/tabs/1.png) no-repeat center;
+	background-size: cover;
+	border-radius: 2rem 0 0 2rem;
+	display: inline-block;
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+
+}
+.tab-section-text{
+	width: 49.5%;
+	display: inline-block;
+	padding: 0rem 1.5rem 1rem 1.5rem;
+	p{
+		font-size: 1.1rem;
+		font-weight: 300;
+		.sans();
+		margin-bottom: 3rem;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation-name: fadeIn;
+		animation-name: fadeIn;
+		span{
+			margin-left: 30%;
+
+		}
+	}
+}
+.tab-section-img{
+	padding-bottom: 38%;
+	padding-top: 38%;
+}
+.tab-section-title{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+	font-size: 1.1rem;
+	.sans();
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.tab-section-button{
+	background-color: #fc2d4c;
+	box-shadow: 0px 3px 10px 0px #9e1e3e;
+	border:none;
+	border-radius: 2rem;
+	color:#fff;
+	.sans();
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	text-align: center;
+	margin-left: 10%;
+	padding: 1.2rem 4rem;
+	cursor:pointer;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	// background-image: -moz-linear-gradient( 90deg, rgb(220,0,55) 0%, rgb(255,49,78) 100%);
+	// background-image: -webkit-linear-gradient( 90deg, rgb(220,0,55) 0%, rgb(255,49,78) 100%);
+	// background-image: -ms-linear-gradient( 90deg, rgb(220,0,55) 0%, rgb(255,49,78) 100%);
+}
+.tabs>section>p {
+
+	font-size: 1.1rem;
+	font-weight: 300;
+	.sans();
+	span{
+		margin-left: 30%;
+	}
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+/* Описываем анимацию свойства opacity */
+ 
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none;
+	position: absolute;
+
+}
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+	display: inline-block;
+	margin: 0 -2px 0 1rem;
+	text-align: center;
+	color: #1f2029;
+	background: #f6f6f6;
+	padding: 1rem;
+	.sans();
+	font-weight: 700;
+	font-size: 1.1rem;
+	border-radius: 1.1rem 1.1rem 0 0;
+	
+}
+/* Шрифт-иконки от Font Awesome в формате Unicode */
+.tabs>label:before {
+	.sans();
+	font-weight: normal;
+
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+ 
+.tabs>label:hover {
+	color: #fff;
+	background-color: #1f2029;
+	cursor: pointer;
+	.tab-img{
+		filter: invert(1);
+	}
+
+}
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+	.tab-img{
+		filter: invert(1);
+	}
+	color: #fafafa ;
+	background-color: #1f2029;
+	
+}
+/* Активация секций с помощью псевдокласса :checked */
+ #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4, #tab5:checked~#content-tab5, #tab1:checked~#content-tab1 {
+	display: block;
+}
+
+
+.twice-section{
+	height: 24rem;
+	background-color: #fefefe;
+}
